@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+body{
+	background-color: #FFFFFF;
+	padding: 20px;
+}
+.normalBox{	
+	border: 1px solid #999;
+	border-style: outset;
+	
+}
+#mainContent{	
+	padding: 20px;
+	background-color: #eee;	
+}
+.clearfix:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.clearfix{
+	*zoom: 1;  /*兼容IE低版本*/
+}
+
+.boxL{
+	background-color: #FFFFFF;
+	float: left;	
+	width: 200px;
+}
+.boxL>p{
+	margin-top: 20px;
+}
+.boxR{
+	background-color: #FFFFFF;
+	float: right;
+	width: 120px;
+}
+.boxM{
+	background-color: #FFFFFF;
+	margin-left: 220px;
+	margin-right: 140px;
+	
+}
+
+.boxTeamLogo{
+	background-color: #eee;
+	margin: 20px;
+	float: left;	
+	width: 80px;
+	height: 80px;
+	text-align: center;
+}
+.boxSelfLogo{
+	background-color: #eee;
+	margin: 20px;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+}
+.boxTeamLogo>p,.boxSelfLogo>p{
+	margin: 0;
+}
+.boxTeamLogo>p:first-child,.boxSelfLogo>p:first-child{
+	margin-top: 20px;
+}

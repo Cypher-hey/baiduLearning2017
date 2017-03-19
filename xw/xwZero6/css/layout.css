@@ -1,0 +1,289 @@
+@charset "UTF-8";
+html{
+	width: 980px;
+	height: 1368px;	
+}
+body{
+	width: 892px;
+	height: 1368px;
+	padding-left: 44px;
+	padding-right: 44px;
+}
+p{
+	margin: 0;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+}
+.redblock{
+	width: 110px;
+	height: 61px;
+	background-color: crimson;
+	color: white;
+	font-size: 12px;
+	font-family: 黑体;
+	display: inline-block;
+}
+.redblock>p{
+	padding-top: 42px;
+	padding-left: 8px;
+	
+}
+.whiteblock{
+	color: #d45d5c;
+	font-size: 12px;
+	font-family: "黑体";
+	display: inline-block;
+}
+.whiteblock>p{
+	padding-top: 42px;
+	right: 0px;
+	display: inline-block;
+}
+.cutlineHeader{
+	width: 892px;
+	height: 2px;
+	background-color: #938e8c;
+}
+
+#part1{
+	display: flex;
+	justify-content: space-between;
+}
+.picture1{
+	width: 641px;
+	height: 301px;
+}
+.picture1>img{
+	width: 641px;
+	height: 301px;
+}
+.part1_right{
+	width: 203px;
+	height: 301px;
+}
+.word1{
+	line-height: 40px;
+	/*text-decoration: underline;*/
+	
+}
+.word1>p{
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color: #000000;
+	border-bottom: 2px solid;
+	display: inline-block;
+}
+.word1>p>span{
+	font-family: "微软雅黑";
+	font-size: 30px;
+	color: #000000;
+}
+.word2>p{
+	line-height: 10px;
+	color: #676767;
+	font-family: "楷体";
+	font-size: 12px;
+}
+.word3{
+	margin-left: -16px;
+}
+.word3>p{
+	color: #75b86b;
+	font-family: "微软雅黑";
+	font-size: 116px;
+	font-style: oblique;
+	font-weight: bolder;
+	
+}
+.word4{
+	color: #cc8091;
+	font-family: "微软雅黑";
+}
+.word4-1>p{
+	font-size: 55px;
+}
+.word4-2>p:nth-child(1){
+	font-size: 21px;
+}
+.word4-2>p:nth-child(2){
+	font-size: 12px;
+}
+.word4-1, .word4-2{
+	display: inline-block;
+}
+
+.part2{
+	display: flex;
+	width: 641px;
+}
+.part2-1{
+	margin-right: 2em;
+}
+.part2-2{
+	margin-right: 2em;
+}
+.part2-1>p:first-child{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+	color: #418c59;
+	text-decoration: underline;
+}
+.part2-1>p:nth-child(2){
+	font-family: "宋体";
+	font-size: 12px;
+	color: #767777;
+	line-height: 16px;
+}
+.part2-2>p:first-child{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+	color: #d2994f;
+	text-decoration: underline;
+}
+.part2-2>p:nth-child(2){
+	font-family: "宋体";
+	font-size: 12px;
+	color: #231815;
+	line-height: 16px;
+	opacity: 0.7;
+}
+.part2-3-1>p:first-child{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+	color: #cc7680;
+	text-decoration: underline;
+}
+.part2-3-1>p:nth-child(2){
+	font-family: "宋体";
+	font-size: 12px;
+	color: #767777;
+	line-height: 16px;
+}
+.part2-3-2{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	font-weight: bold;
+	color: #231815;
+	line-height: 16px;
+	opacity: 0.7;
+}
+.part2-3-2 span{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	font-style: oblique;
+	color: #cd4a48;
+	line-height: 16px;
+	opacity: 0.7;
+}
+
+.part3{
+	display: flex;
+}
+.part3-1{
+	width: 415px;
+	
+}
+.part3-1_title span{
+	font-family: "黑体";
+	font-size: 72px;
+	font-weight: bold;
+	color: #f5e327;
+	font-style: oblique;
+
+}
+.part3-1_title>p{
+	letter-spacing: -2px;
+}
+.part3-1_title>p:first-child{
+	font-family: "黑体";
+	font-size: 42px;
+	font-weight: bold;
+	color: #11456b;
+}
+.part3-1_title>p:nth-child(2){
+	font-family: "黑体";
+	font-size: 33px;
+	font-weight: bold;
+	color: #11456b;
+}
+
+.part3-1_content{
+	
+}
+.part3-1_content>span{
+	color: #F5E327;
+	font-family: "微软雅黑";
+	font-size: 70px;
+	float: left;
+	
+	top: 0px;
+	left: 0px;
+	
+}
+.part3-1_content img{
+	width: 120px;
+	height: 200px;
+	float: right;
+	margin: 10px 10px 10px 10px;
+}
+.part3-1_content>p{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #767777;
+	line-height: 16px;
+}
+.part3-2_pic{
+	width: 458px;
+	height: 275px;
+	position: relative;
+}
+.part3-2_pic_intro{
+	width: 458px;
+	height: 61px;
+	position: absolute;
+	background-color: #000000;
+	opacity: 10%;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+}
+
+#gang{
+	width: 3px;
+	height: 44px;
+	background-color: #72b16a;
+}
+#a{
+	font-family: "微软雅黑";
+	font-size: 26px;
+	color: #FFFFFF;
+	margin-left: 30px;
+}
+#b{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	font-style: oblique;
+	color: #72b16a;
+	word-spacing: 140%;
+	margin-top: 10px;
+}
+
+.part3-2_content{
+	width: 459px;
+	height: 318px;
+	background-color: palegoldenrod;
+	position: relative;
+}
+.part3-2_content>.redbox{
+	width: 260px;
+	height: 160px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #CC7680;
+}

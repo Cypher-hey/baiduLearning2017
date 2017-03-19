@@ -1,0 +1,139 @@
+@charset "UTF-8";
+h1{
+	margin: 0;
+}
+ul{
+	list-style-type:circle;
+}
+header{
+	background-color: dimgray;
+	height: 60px;
+}
+header div.logo{
+	width: 70%;
+	
+	float: left;
+}
+header div.nav_links{
+	width: 30%;	
+	float: right;
+}
+header div.nav_links li{
+	display: inline;	
+	color: #FFFFFF;	
+}
+header div.nav_links li a{
+	color: #FFFFFF;	
+}
+body{
+	background-color: lightgray;
+	
+}
+#mainContent{
+	margin: 2em;
+	display: flex;
+	align-items: flex-start;
+}
+.fatherContent{
+	
+	width: 100%;
+}
+.childContent{
+	padding: 2em;
+	margin-bottom: 2em;
+	border: 2px solid #D3D3D3;
+	border-style: outset;
+	background-color: #FFFFFF;
+	
+}
+.childContent>h3, .childContent div>span{
+	color: #C0C0C0;
+}
+.picture{
+	width: 200px;
+	height: 200px;
+	border: 2px solid #D3D3D3;
+	text-align: center;
+	display: inline-block;
+	margin: 1em;
+}
+table{
+	width: 100%;
+	border-collapse:collapse;
+}
+table, th, td{
+	border: 2px solid lightgray;
+}
+th{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.rowData{
+}
+.leftData{
+	width: 100%;
+	height: 40px;
+	margin: 0 auto;
+	float: left;
+}
+.leftData>label{
+	float:right;
+}
+.rightData{
+	width: 100%;
+	height: 40px;
+	margin: 0 auto;
+	float: right;
+}
+.space40{
+	width: 40%;
+}
+.space60{
+	width:60%;
+}
+.submitInfirm{
+	width: 100%;
+	height: 50px;
+	text-align:center;
+}
+.sideInfo{
+	
+	
+	width: 500px;
+	
+	padding: 2em;
+	margin-left: 1em;
+	margin-bottom: 2em;
+	border: 2px solid #D3D3D3;
+	border-style: outset;
+	background-color: #FFFFFF;
+}
+.clearfix:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.clearfix{
+	*zoom: 1;  /*兼容IE低版本*/
+}
+
+#submitBtn{
+	width: 80%;
+	height: 50px;
+	background-color: deepskyblue;
+	color: white;
+}
+input[type=text],input[type=password]{
+	width: 100%;
+}
+footer{
+	background-color: #000000;
+	color: white;
+	width: 100%;
+	height: 50px;
+	text-align:center;
+	padding-top: 1em;
+}
+footer>p{
+
+}
