@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		height: 250px;
+		position: relative;
+	}
+	.block{
+		display: inline-block;
+		height: 30px;
+		background-color: red;
+		text-align: center;
+		padding: 0 10px;
+		margin: 0 2px;
+
+	}
+	#showBox{
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+		position: absolute;
+		bottom: 0;
+	}
+</style>
+<body>
+	<div id="edit" style="text-align: center;">
+		<input type="text" id="input_num"   value="">
+		<input type="button" id="left_in"   value="左侧入">
+		<input type="button" id="right_in"  value="右侧入">
+		<!-- 占位符&nbsp -->
+		<span>&nbsp&nbsp</span> 
+		<input type="button" id="left_out"  value="左侧出">
+		<input type="button" id="right_out" value="右侧出">
+		<input type="button" id="sort_num"  value="排序">
+	</div>
+
+	<div id="showBox" style="text-align: center;">
+		
+	</div>
+
+<script type="text/javascript">
+function number_get(){
+	var num = document.getElementById("input_num").value;
+	return num;
+}
+
+	// body...
+
+	// queue_left_in
+	document.getElementById("left_in").onclick = function(){
+		var num = number_get();
+		if (!num) {
+			console.log("please input a num");
+			return false;
+		}
+		if (isNaN(num)) {
+			document.getElementById("input_num").value = '';
+			alert("not a number!");
+			return false;
+		}
+		if (num < 10 || num >100) {
+			document.getElementById("input_num").value = '';
+			alert("the number you have input not suit the requirement");
+			return false;
+		}
+		var len =document.getElementById("showBox").getElementsByTagName("div").length;
+		if (len >60) {
+			document.getElementById("input_num").value = '';
+			alert("out of the maximum limits, you can delete some before you tryagain");
+			return false;
+		}
+		var node = document.createElement("div");
+		node.setAttribute("class", "block");
+
+		// a terrible way to do the value inset.
+		var textnode = document.createElement("span");
+		textnode.innerText = num;
+		textnode.style.display = "none";
+		node.appendChild(textnode);
+
+
+		node.style.height = num *2 + "px";
+		if (document.getElementById("showBox").getElementsByTagName("div")) {
+			var firstdiv = document.getElementById("showBox").getElementsByTagName("div")[0];
+			document.getElementById("showBox").insertBefore(node, firstdiv);
+		}
+		else{
+			document.getElementById("showBox").appendChild(node);
+		}
+		document.getElementById("input_num").value = '';
+	};
+
+	// queue_right_in
+	document.getElementById("right_in").onclick = function(){
+		var num = number_get();
+		if (!num) {
+			console.log("please input a num");
+			return false;
+		}
+		if (isNaN(num)) {
+			document.getElementById("input_num").value = '';
+			alert("not a number!");
+			return false;
+		}
+		if (num < 10 || num >100) {
+			document.getElementById("input_num").value = '';
+			alert("the number you have input not suit the requirement");
+			return false;
+		}
+		var len =document.getElementById("showBox").getElementsByTagName("div").length;
+		if (len >60) {
+			document.getElementById("input_num").value = '';
+			alert("out of the maximum limits, you can delete some before you tryagain");
+			return false;
+		}
+		var node = document.createElement("div");
+		node.setAttribute("class", "block");
+
+		node.style.height = num * 2 + "px";
+		document.getElementById("showBox").appendChild(node);
+		
+		document.getElementById("input_num").value = '';
+	};
+
+	// queue_left_out
+	document.getElementById("left_out").onclick = function(){
+		
+		if (document.getElementById("showBox").getElementsByTagName("div")) {
+			try {
+	    		var head_div = document.getElementById("showBox").getElementsByTagName("div")[0];
+				var father_node = head_div.parentElement;
+
+				father_node.removeChild(head_div);
+			} catch (e) {
+			    if (e instanceof TypeError) {
+			        console.log("there have no more to wipe!");
+			    } else if (e instanceof Error) {
+			        alert(e.message);
+			    } else {
+			        alert('Error: ' + e);
+			    }
+			}
+			
+		}
+
+		document.getElementById("input_num").value = '';
+		
+		
+		
+	};
+
+	// queue_right_out
+	document.getElementById("right_out").onclick = function(){
+		
+		if (document.getElementById("showBox").getElementsByTagName("div")) {
+			try {
+	    		var len =document.getElementById("showBox").getElementsByTagName("div").length;
+				var rear_div = document.getElementById("showBox").getElementsByTagName("div")[len - 1];
+				var father_node = rear_div.parentElement;
+
+				father_node.removeChild(rear_div);
+			} catch (e) {
+			    if (e instanceof TypeError) {
+			        console.log("there have no more to wipe!");
+			    } else if (e instanceof Error) {
+			        alert(e.message);
+			    } else {
+			        alert('Error: ' + e);
+			    }
+			}
+			
+		}
+		
+		document.getElementById("input_num").value = '';
+		
+		
+	};
+
+	// showBox框中点击事件
+	document.getElementById("showBox").onclick = function (event) {
+		// body...
+		var clicked_div = event.target;
+		/**
+		在此例中，event.currentTarget == this == document.getElementById("showBox");
+		& event.target == 被点击的目标元素;
+		*/
+		if (event.target == this) {return false;}
+		var father_node = clicked_div.parentElement;
+		father_node.removeChild(clicked_div);
+		console.log(father_node);
+
+		document.getElementById("input_num").value = '';
+	}
+
+	// 采用快排对数字进行排序
+	document.getElementById("sort_num").onclick = function (event) {
+		// body...
+		var content = document.getElementById("showBox").getElementsByTagName("div");
+
+	}
+</script>
+</body>
+</html>
